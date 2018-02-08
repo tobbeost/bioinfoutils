@@ -11,7 +11,18 @@ def read_fasta(infile):
       seq.append(line)
 
   if name: yield (name, ''.join(seq))
-  
+
+def create_seqdict(filename):
+  print('loading file '+filename)
+  seqdict={}
+  with open(filename) as f:
+    for name,seq in read_fasta(f):
+      if name not in seqdict:
+        seqdict[name]=seq
+      else:
+        print('not all id:s are unique')
+  return(seqdict)
+
 def printFastaFile(seqdict,outfile):
   with open(outfile,'w') as g:
     for name in sorted(seqdict.iterkeys()):
@@ -21,3 +32,5 @@ def printFastaFile(seqdict,outfile):
       while len(seq) > 0:
         g.write(seq[:length]+'\n')
         seq = seq[length:]
+        
+        
