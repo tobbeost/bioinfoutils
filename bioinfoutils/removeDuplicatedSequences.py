@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from editFasta import read_fasta
 import sys,argparse
 
@@ -50,8 +50,8 @@ def main(infile,outfile,saveAllNames):
   if outfile==None:
     outfile=infile.split('.')[0]+'_2.fasta.out'
   seqdict=removeDuplicates(infile)
-  #print 'number of sequences in output file:',len(seqdict)
-  printFastaFile_inverterd(seqdict,outfile,saveAllNames)
+  print('number of sequences in output file:'+str(len(seqdict)))
+  printFastaFile_inverted(seqdict,outfile,saveAllNames)
 
 
 
