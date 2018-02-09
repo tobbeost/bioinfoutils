@@ -48,7 +48,7 @@ def printFastaFile_inverted(seqdict,outfile,saveAllNames):
 
 def main(infile,outfile,saveAllNames):
   if outfile==None:
-    outfile=infile.split('.')[0]+'_2.fasta'
+    outfile=infile.split('.')[0]+'_2.fasta.out'
   seqdict=removeDuplicates(infile)
   #print 'number of sequences in output file:',len(seqdict)
   printFastaFile_inverterd(seqdict,outfile,saveAllNames)
