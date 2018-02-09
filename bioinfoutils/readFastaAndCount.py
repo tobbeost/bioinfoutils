@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from editFasta import create_seqdict
+from bioinfoutils import create_seqdict
 import sys
 
     

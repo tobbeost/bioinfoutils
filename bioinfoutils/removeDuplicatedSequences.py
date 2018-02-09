@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from editFasta import read_fasta
+from bioinfoutils import read_fasta
 import sys,argparse
 
 
