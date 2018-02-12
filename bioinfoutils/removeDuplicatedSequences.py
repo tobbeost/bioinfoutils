@@ -14,8 +14,6 @@ def parseArgs(argv):
   arguments=parser.parse_args(argv)
   return arguments
   
-### From BioPython and http://stackoverflow.com/questions/7654971/parsing-a-fasta-file-using-a-generator-python ###
-### Read the fasta file(s) ###
 
 def removeDuplicates(infile):
   seqdict={}
